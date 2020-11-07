@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import * as React from "react";
 import { Global, jsx, css } from "@emotion/core";
 import Logo from "./components/Logo";
