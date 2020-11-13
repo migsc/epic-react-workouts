@@ -9,11 +9,12 @@ export default function LoginForm({ onSubmit, buttonText = "Login" }: Props) {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const { username, password } = event.target.elements;
+    const username: any = event.currentTarget.elements.namedItem("username");
+    const password: any = event.currentTarget.elements.namedItem("password");
 
     onSubmit({
-      username: username.value,
-      password: password.value,
+      username: username.value || "",
+      password: password.value || "",
     });
   };
 
