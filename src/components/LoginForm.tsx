@@ -6,14 +6,14 @@ type Props = {
 };
 
 export default function LoginForm({ onSubmit, buttonText = "Login" }: Props) {
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const { username, password } = event.target.elements;
 
     onSubmit({
       username: username.value,
-      password: password.value
+      password: password.value,
     });
   };
 

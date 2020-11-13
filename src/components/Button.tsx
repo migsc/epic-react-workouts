@@ -3,12 +3,13 @@ import React from "react";
 type Props = {
   children?: any;
   variant?: string;
+  onClick: () => void;
 };
 
 export default function Button({
   variant = "primary",
   children,
-  ...props
+  onClick,
 }: Props) {
-  return <button {...props}>{children}</button>;
+  return <button onClick={onClick}>{children}</button>;
 }
